@@ -4,7 +4,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Gene Checker", layout="centered")
 
-st.title("🧬 Gene Checker for ADHD, Autism, Fibromyalgia, Bipolar")
+st.title("Gene Checker for ADHD, Autism, Fibromyalgia, Bipolar")
 
 st.markdown("""
 Upload your **gene panel CSV** (one column with gene symbols) and get a report of which condition(s) each gene is associated with, plus links to NCBI, PharmGKB, and ClinGen.
@@ -50,7 +50,7 @@ if uploaded_file is not None:
         st.dataframe(df_results)
         csv = df_results.to_csv(index=False)
         st.download_button(
-            label="📥 Download Report as CSV",
+            label=" Download Report as CSV",
             data=csv,
             file_name="gene_report.csv",
             mime="text/csv"
